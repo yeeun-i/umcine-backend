@@ -1,0 +1,15 @@
+server:
+  port: 8080
+spring:
+  datasource:
+    url: ${DB_URL:jdbc:mysql://localhost:3306/umc_movie}
+    username: ${DB_USER:root}
+    password: ${DB_PASSWORD}
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    open-in-view: false
+app:
+  cors:
+    enabled: ${CORS_ENABLED:true}
+    origin: ${FRONTEND_ORIGIN:http://localhost:5173}
